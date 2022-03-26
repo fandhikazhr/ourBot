@@ -10,3 +10,10 @@ void setup() {
     Serial.begin(9600);
     myBot.wifiConnect(ssid, pass);
     myBot.setTelegramToken(token);
+    
+    // checking
+    if(myBot.testConnection())
+      Serial.println("Connected to WIFI");
+    else
+      Serial.println("Failed to connected WIFI");
+}
