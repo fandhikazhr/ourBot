@@ -25,3 +25,15 @@ void loop() {
     
     Serial.println("Message : " + msg.text);
     String message = msg.text;
+    if(message == "Hello")
+    {
+      myBot.sendMessage(id, "Hello, nice to meet you");
+    }
+    else if(message == "How are you ?")
+    {
+      myBot.sendMessage(id, "I'am fine");
+    }
+        
+  }
+
+}
