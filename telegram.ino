@@ -17,3 +17,11 @@ void setup() {
     else
       Serial.println("Failed to connected WIFI");
 }
+
+void loop() {
+  TBMessage msg;
+  if(myBot.getNewMessage(msg))
+  {
+    
+    Serial.println("Message : " + msg.text);
+    String message = msg.text;
