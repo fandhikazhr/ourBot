@@ -38,3 +38,21 @@ void setup() {
     }
 
 }
+
+void loop() {
+    // put your main code here, to run repeatedly:   
+    TBMessage msg;
+    if(myBot.getNewMessage(msg))
+    {  
+      Serial.println("Message : " + msg.text);
+      String message = msg.text;
+      if(message == "Hello")
+      {
+        myBot.sendMessage(id, "Hello, nice to meet you");
+      }
+      else if(message == "How are you ?")
+      {
+        myBot.sendMessage(id, "I'am fine");
+      }   
+    }
+}
