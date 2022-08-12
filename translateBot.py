@@ -19,3 +19,9 @@ def selamat_datang(message):
     markup.add(btn1, btn2, btn3)
     chatid = message.chat.id
     bot.send_message(chatid, text='', reply_markup=markup)
+
+@bot.message_handler(commands=['help'])
+def tolong_saya(message):
+    chatid = message.chat.id
+    bot.send_message(chatid, '???')
+    bot.send_message(chatid, '')
