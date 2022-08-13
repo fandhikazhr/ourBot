@@ -25,3 +25,8 @@ def tolong_saya(message):
     chatid = message.chat.id
     bot.send_message(chatid, '???')
     bot.send_message(chatid, '')
+
+@bot.message_handler(commands=['about'])
+def tentang_bot(message):
+    chatid = message.chat.id
+    bot.send_message(chatid, '')
