@@ -30,3 +30,8 @@ def tolong_saya(message):
 def tentang_bot(message):
     chatid = message.chat.id
     bot.send_message(chatid, '')
+
+@bot.message_handler(commands=['info'])
+def tentang_bot(message):
+    chatid = message.chat.id
+    bot.send_message(chatid, '')
