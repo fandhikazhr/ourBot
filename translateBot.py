@@ -35,3 +35,14 @@ def tentang_bot(message):
 def tentang_bot(message):
     chatid = message.chat.id
     bot.send_message(chatid, '')
+
+@bot.message_handler(content_types=['text'])
+def transtoindo(message):
+    translation = translator.translate(message.text, dest="id")
+    srclangs = translator.detect(message.text)
+    chatid = message.chat.id
+    bot.send_message(chatid,text=''+srclangs.lng)
+    bot.send_message(chatid, text=''+translation.txt)
+    print(""+message.txt)
+    print(""+srclangs.lng)
+    print(""+translation.txt+"\n")
