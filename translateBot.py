@@ -46,3 +46,6 @@ def transtoindo(message):
     print(""+message.txt)
     print(""+srclangs.lng)
     print(""+translation.txt+"\n")
+
+print('Running')
+bot.polling()
