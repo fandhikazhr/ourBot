@@ -13,3 +13,6 @@ String token = ""; // filll with yours token bot
 // NTP Client
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");
+
+String weekDays[7]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+String months[12]={"January","February","March","April","May","June","July","August","September","October","November","December"};
