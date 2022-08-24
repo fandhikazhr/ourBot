@@ -34,19 +34,17 @@ void setup() {
   else
     Serial.println("\ntestConnection FAILED");
 
-  // reply keyboard customization
-  // add a button that send a message with "Simple button" text
   myKbd.addButton("Time");
-  // add another button that send the user contact
+
   myKbd.addButton("Contact request", CTBotKeyboardButtonContact);
-  // add another button that send the user position (location)
+
   myKbd.addButton("Location request", CTBotKeyboardButtonLocation);
-  // add a new empty button row
+
   myKbd.addRow();
-  // add a button that send a message with "Hide replyKeyboard" text
+
   // (it will be used to hide the reply keyboard)
   myKbd.addButton("Hide replyKeyboard");
-  // resize the keyboard to fit only the needed space
+
   myKbd.enableResize();
   isKeyboardActive = false;
 
