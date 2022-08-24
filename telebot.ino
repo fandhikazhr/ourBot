@@ -10,3 +10,6 @@ String ssid = ""; // fill with yours ssid
 String pass = ""; // fill with yours password of ssid
 String token = ""; // filll with yours token bot
 
+// NTP Client
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP, "pool.ntp.org");
