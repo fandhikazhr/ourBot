@@ -57,4 +57,8 @@ void loop() {
   // a variable to store telegram message data
   TBMessage msg;
   timeClient.update();
+  
+  // Get Time
+  time_t epochTime = timeClient.getEpochTime();
+  struct tm *ptm = gmtime ((time_t *)&epochTime);
 }
