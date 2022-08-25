@@ -52,3 +52,7 @@ void setup() {
   timeClient.begin();
   timeClient.setTimeOffset(0);
 }
+
+void loop() {
+  
+}
