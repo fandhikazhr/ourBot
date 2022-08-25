@@ -54,5 +54,7 @@ void setup() {
 }
 
 void loop() {
-  
+  // a variable to store telegram message data
+  TBMessage msg;
+  timeClient.update();
 }
