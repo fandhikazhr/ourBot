@@ -61,4 +61,7 @@ void loop() {
   // Get Time
   time_t epochTime = timeClient.getEpochTime();
   struct tm *ptm = gmtime ((time_t *)&epochTime);
+  
+  // wait 500 milliseconds
+  delay(500);
 }
