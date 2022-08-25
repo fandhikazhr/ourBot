@@ -62,6 +62,11 @@ void loop() {
   time_t epochTime = timeClient.getEpochTime();
   struct tm *ptm = gmtime ((time_t *)&epochTime);
   
+  // if there is an incoming message...
+  if (myBot.getNewMessage(msg)) {
+    
+  }
+  
   // wait 500 milliseconds
   delay(500);
 }
