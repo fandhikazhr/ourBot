@@ -92,7 +92,16 @@ void loop() {
           // print every others messages received
           myBot.sendMessage(msg.sender.id, "Time : " + whattime + "\nDate : " + weekDay + ", " + day + "/" + month + "/" + currentYear);
         }
+      } else {
+        // the user write anything else and the reply keyboard is not active --> show a hint message
+        myBot.sendMessage(msg.sender.id, "Try 'show keyboard'");
       }
+    } else if (msg.messageType == CTBotMessageLocation) {
+      // received a location message --> send a message with the location coordinates
+      myBot.sendMessage(msg.sender.id, "Longitude: " + (String)msg.location.longitude +
+        "\nLatitude: " + (String)msg.location.latitude);
+
+    }
   }
   
   // wait 500 milliseconds
