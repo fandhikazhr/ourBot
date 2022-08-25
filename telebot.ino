@@ -75,6 +75,24 @@ void loop() {
         myBot.sendMessage(msg.sender.id, "Reply Keyboard enable. You can know what time, your contact, your location or hide the keyboard", myKbd);
         isKeyboardActive = true;
       }
+      // check if the reply keyboard is active 
+      else if (isKeyboardActive) {
+        // is active -> manage the text messages sent by pressing the reply keyboard buttons
+        if (msg.text.equalsIgnoreCase("Hide replyKeyboard")) {
+          // sent the "hide keyboard" message --> hide the reply keyboard
+          myBot.removeReplyKeyboard(msg.sender.id, "Reply keyboard removed");
+          isKeyboardActive = false;
+        } else {
+          String whattime = timeClient.getFormattedTime();
+          int day = ptm->tm_mday;
+          String weekDay = weekDays[timeClient.getDay()];
+          int currentMonth = ptm->tm_mon+1;
+          String month = months[currentMonth-1];
+          int currentYear = ptm->tm_year+1900;
+          // print every others messages received
+          myBot.sendMessage(msg.sender.id, "Time : " + whattime + "\nDate : " + weekDay + ", " + day + "/" + month + "/" + currentYear);
+        }
+      }
   }
   
   // wait 500 milliseconds
