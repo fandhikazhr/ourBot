@@ -72,7 +72,7 @@ void loop() {
       }
       if (msg.text.equalsIgnoreCase("show keyboard")) {
         // the user is asking to show the reply keyboard --> show it
-        myBot.sendMessage(msg.sender.id, "Reply Keyboard enable. You can send a simple text, your contact, your location or hide the keyboard", myKbd);
+        myBot.sendMessage(msg.sender.id, "Reply Keyboard enable. You can know what time, your contact, your location or hide the keyboard", myKbd);
         isKeyboardActive = true;
       }
   }
