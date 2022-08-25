@@ -70,6 +70,11 @@ void loop() {
       if (msg.text == "/start"){
         myBot.sendMessage(msg.sender.id, "Welcome @" + msg.sender.username);
       }
+      if (msg.text.equalsIgnoreCase("show keyboard")) {
+        // the user is asking to show the reply keyboard --> show it
+        myBot.sendMessage(msg.sender.id, "Reply Keyboard enable. You can send a simple text, your contact, your location or hide the keyboard", myKbd);
+        isKeyboardActive = true;
+      }
   }
   
   // wait 500 milliseconds
