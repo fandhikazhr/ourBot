@@ -100,7 +100,13 @@ void loop() {
       // received a location message --> send a message with the location coordinates
       myBot.sendMessage(msg.sender.id, "Longitude: " + (String)msg.location.longitude +
         "\nLatitude: " + (String)msg.location.latitude);
-
+    } else if (msg.messageType == CTBotMessageContact) {
+      // received a contact message --> send a message with the contact information
+      myBot.sendMessage(msg.sender.id, "Name: " + (String)msg.contact.firstName +
+        "\nSurname: " + (String)msg.contact.lastName +
+        "\nPhone: " + (String)msg.contact.phoneNumber +
+        "\nID: " + (String)msg.contact.id +
+        "\nvCard: " + (String)msg.contact.vCard);
     }
   }
   
