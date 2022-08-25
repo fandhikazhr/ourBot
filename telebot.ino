@@ -64,7 +64,12 @@ void loop() {
   
   // if there is an incoming message...
   if (myBot.getNewMessage(msg)) {
-    
+    // check what kind of message I received
+    if (msg.messageType == CTBotMessageText) {
+      // received a text message
+      if (msg.text == "/start"){
+        myBot.sendMessage(msg.sender.id, "Welcome @" + msg.sender.username);
+      }
   }
   
   // wait 500 milliseconds
