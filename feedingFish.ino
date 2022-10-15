@@ -14,3 +14,19 @@ void setup(){
   myBot.wifiConnect(ssid, pass);
   myBot.setTelegramToken(token);
 }
+
+
+void loop(){
+  TBMessage msg;
+  if(myBot.getNewMessage(msg)){
+    Serial.println("Message : + msg.text");
+    String message = msg.txt;
+    if(message = "Beri Makan"){
+      myServo.write(0);
+    }
+    delay(100); // delay 1 second
+    myServo.write(90); // back to first position
+    myBot.sendMessage(id, "YOUR FISH HAVE BEEN FED !!!");
+    myBot.sendMessage(id, "YUMMY :)");
+  }
+}
