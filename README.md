@@ -3,5 +3,5 @@ Telegram Bot with NodeMCU ESP8266 🤖
 
 # References
 
-- https://www.arduinolibraries.info/libraries/ct-bot
-- https://www.arduinolibraries.info/libraries/arduino-json
+- [CT-Bot](https://www.arduinolibraries.info/libraries/ct-bot)
+- [ArduinoJson](https://www.arduinolibraries.info/libraries/arduino-json)
